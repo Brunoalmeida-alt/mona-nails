@@ -1,0 +1,278 @@
+/* ESTILO GERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: white;
+  height: 100vh;
+}
+
+.interface {
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn-contato button {
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #9c38d6;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-contato button:hover {
+  box-shadow: 0px 0px 8px #c67cf1;
+  transform: scale(1.05);
+}
+
+.logo01 {
+  border-radius: 70px;
+}
+
+h2.titulo,
+h3.titulo,
+h4.titulo {
+  color: black;
+  font-size: 38px;
+  text-align: center;
+  line-height: 80px;
+}
+
+h2.titulo span,
+h3.titulo span,
+h4.titulo span {
+  color: #9c38d6;
+}
+
+h2.titulo-sobre span {
+  color: #9c38d6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ESTILO DO CABEÇALHO */
+header,
+footer {
+  background-color: #c67cf1;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+
+header > .interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav a {
+  color: #303030;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+header nav.manu-desktop a:hover {
+  color: #9c38d6;
+  transform: scale(1.05);
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav.manu-desktop ul li {
+  display: inline-block;
+  padding: 0 40px;
+}
+
+/* BOTÃO MENU MOBILE */
+.btn-abrir-menu {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #000;
+}
+
+.btn-abrir-menu i {
+  font-size: 30px;
+}
+
+/* MENU MOBILE */
+.menu-mobile {
+  background-color: #fff;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  width: 70%;
+  display: none;
+  padding-top: 20px;
+}
+
+.menu-mobile .btn-fechar {
+  padding: 20px 4%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.menu-mobile .btn-fechar i {
+  color: black;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.menu-mobile nav ul {
+  text-align: right;
+}
+
+.menu-mobile nav ul li a {
+  color: black;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 20px 6%;
+  display: block;
+  text-decoration: none;
+}
+
+.menu-mobile nav ul li a:hover {
+  background-color: #9c38d6;
+  color: white;
+}
+
+/* TOPO DO SITE */
+section.topo-do-site {
+  padding: 40px 4%;
+}
+
+section.topo-do-site .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.topo-do-site h1 {
+  color: #000000;
+  font-size: 38px;
+  line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span {
+  color: #9c38d6;
+}
+
+.topo-do-site .txt-topo-site p {
+  color: #000000;
+  margin: 40px 0px;
+}
+
+.topo-do-site .img-topo-site img {
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+/* TRABALHOS */
+section.trabalhos {
+  padding: 40px 4%;
+}
+
+.instagram-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* ESTILO DE SOBRE */
+section.sobre .flex{
+    align-items: center;
+    gap: 20px;
+}
+
+section.sobre{
+    padding: 40px 4%;
+    
+}
+
+/* INFORMAÇÕES */
+section.informções {
+  padding: 40px 4%;
+}
+
+h5.sub-titulo {
+  text-align: center;
+  color: #9c38d6;
+  font-size: 23px;
+  line-height: 60px;
+}
+
+p.text {
+  text-align: center;
+}
+
+/* RESPONSIVO */
+@media screen and (max-width: 1020px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .manu-desktop,
+  .btn-contato {
+    display: none;
+  }
+
+  .btn-abrir-menu {
+    display: block;
+  }
+
+  section.topo-do-site {
+    padding: 25px 8%;
+  }
+
+  .topo-do-site .img-topo-site img {
+    width: 100%;
+  }
+
+  section.topo-do-site .flex {
+    gap: 20px;
+  }
+
+  h2.titulo,
+  h3.titulo,
+  h4.titulo {
+    font-size: 30px;
+  }
+
+  h5.sub-titulo {
+    font-size: 22px;
+  }
+
+  p.text {
+    font-size: 14px;
+  }
+}
